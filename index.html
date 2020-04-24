@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<title>SmartEdu</title>
+</head>
+<body>
+	<nav-bar></nav-bar>
+
+	<ban-ner></ban-ner>
+
+	<success-story></success-story>
+
+	<about-me></about-me>
+
+	<section class="carousel">
+		<div class="container">
+			<div class="d-flex align-items-center">
+				<button class="btn btn-icon mr-4" onclick="plusSlides(-1)">
+					<img src="./img/icon/left-arrow-white.svg" alt="left-arrow-white"/>
+				</button>
+				<div class="carousel-container">
+					<!-- slide -->
+				</div>
+				<button class="btn btn-icon ml-4" onclick="plusSlides(1)">
+					<img src="./img/icon/right-arrow-white.svg" alt="right-arrow-white"/>
+				</button>
+			</div>
+
+			<div class="text-center">
+			  <span class="dot" onclick="currentSlide(1)"></span> 
+			  <span class="dot" onclick="currentSlide(2)"></span> 
+			  <span class="dot" onclick="currentSlide(3)"></span> 
+			  <span class="dot" onclick="currentSlide(4)"></span> 
+			</div>
+		</div>
+	</section>
+
+	<section class="feature">
+		<div class="container">
+			<h1 class="display-1">Our Features</h1>
+			<div class="feature-container">
+				<div class="feature-sekolah">
+					<div class="headline text-primary">Sekolah</div>
+					<div>Beragam fitur yang memberikan manfaat untuk sekolah</div>
+					<div class="d-flex justify-content-end">
+						<div>
+							<button class="btn btn-icon">
+								<img src="./img/icon/left-arrow-white.svg" alt="left-arrow-white"/>
+							</button>
+							<button class="btn btn-icon">
+								<img src="./img/icon/right-arrow-white.svg" alt="right-arrow-white"/>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="./js/main.js" type="module"></script>
+	<script src="./js/slide.js"></script>
+</body>
+</html>
