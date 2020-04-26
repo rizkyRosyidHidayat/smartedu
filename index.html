@@ -6,60 +6,64 @@
 	<title>SmartEdu</title>
 </head>
 <body>
-	<nav-bar></nav-bar>
+<div id="app">
+	<navbar-section></navbar-section>
 
-	<ban-ner></ban-ner>
+	<banner-section></banner-section>
 
-	<success-story></success-story>
+	<achivement-section></achivement-section>
 
-	<about-me></about-me>
+	<about-section></about-section>
 
-	<section class="carousel">
-		<div class="container">
-			<div class="d-flex align-items-center">
-				<button class="btn btn-icon mr-4" onclick="plusSlides(-1)">
-					<img src="./img/icon/left-arrow-white.svg" alt="left-arrow-white"/>
-				</button>
-				<div class="carousel-container">
-					<!-- slide -->
-				</div>
-				<button class="btn btn-icon ml-4" onclick="plusSlides(1)">
-					<img src="./img/icon/right-arrow-white.svg" alt="right-arrow-white"/>
-				</button>
-			</div>
+	<carousel-section></carousel-section>
 
-			<div class="text-center">
-			  <span class="dot" onclick="currentSlide(1)"></span> 
-			  <span class="dot" onclick="currentSlide(2)"></span> 
-			  <span class="dot" onclick="currentSlide(3)"></span> 
-			  <span class="dot" onclick="currentSlide(4)"></span> 
-			</div>
-		</div>
-	</section>
+	<feature-section></feature-section>
 
-	<section class="feature">
-		<div class="container">
-			<h1 class="display-1">Our Features</h1>
-			<div class="feature-container">
-				<div class="feature-sekolah">
-					<div class="headline text-primary">Sekolah</div>
-					<div>Beragam fitur yang memberikan manfaat untuk sekolah</div>
-					<div class="d-flex justify-content-end">
-						<div>
-							<button class="btn btn-icon">
-								<img src="./img/icon/left-arrow-white.svg" alt="left-arrow-white"/>
-							</button>
-							<button class="btn btn-icon">
-								<img src="./img/icon/right-arrow-white.svg" alt="right-arrow-white"/>
-							</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+	<trusted-section></trusted-section>
 
-	<script src="./js/main.js" type="module"></script>
-	<script src="./js/slide.js"></script>
+	<testimoni-section></testimoni-section>
+
+	<partner-section></partner-section>
+
+	<footer-section></footer-section>
+</div>
+
+	<script src="./js/vue.js"></script>
+	<script type="module">
+		import './js/components/navbar.js'
+		import './js/components/banner.js'
+		import './js/components/achivement.js'
+		import './js/components/about.js'
+		import './js/components/carousel.js'
+		import './js/components/feature.js'
+		import './js/components/trusted.js'
+		import './js/components/testimoni.js'
+		import './js/components/partner.js'
+		import './js/components/footer.js'
+		const vue = new Vue({
+			el: '#app',
+			data: {
+			}
+		})
+
+		const navbarNav = document.querySelector('.navbar-nav > .nav-link')
+		const btnLogin = document.querySelector('.navbar-nav > .nav-link > .btn')
+		const header = document.querySelector('header')
+
+		function scrollFunction() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		    header.setAttribute('class', 'header-active')
+		    navbarNav.setAttribute('class', 'nav-link')  
+		    btnLogin.setAttribute('class', 'btn btn-outline')  
+		  } else {
+		    header.setAttribute('class', 'header-inactive')  
+		    navbarNav.setAttribute('class', 'nav-link text-white')  
+		    btnLogin.setAttribute('class', 'btn btn-outline btn-white')  
+		  }
+		}
+
+		window.onscroll = function() {scrollFunction()};
+
+	</script>
 </body>
 </html>
